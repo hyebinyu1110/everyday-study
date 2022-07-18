@@ -1,0 +1,47 @@
+## 백준 알고리즘 스터디 
+
+문제 1110
+
+
+쓰고있는 답변:
+
+const fs = require('fs');
+const input = fs.readFileSync('/dev/stdin').toString().trim();
+
+let a, b;
+
+if(parseInt(input) <10){
+   input = `0${input}`;
+}
+
+
+let i = 0;
+let sum = 0;
+let [a, b] = input.split("");
+let [c, d] = sum.toString().split("");
+while(true){
+    if(input === sum){
+        console.log(i);
+        break;
+    }
+
+sum = parseInt(a) + parseInt(b);
+    
+if(sum <10){
+   sum = `0${sum}`;
+}
+   
+    sum = b + d;
+    a = b;
+    b = d;
+    i++;
+    
+}
+
+
+
+
+
+
+
+
